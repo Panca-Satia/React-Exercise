@@ -1,0 +1,183 @@
+/* ====== Counter CSS ====== */
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.counter-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #34d399, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+
+.counter-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid;
+  transition: all 0.4s ease;
+  gap: 0.5rem;
+}
+
+.counter-display.positive {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.2);
+}
+
+.counter-display.negative {
+  border-color: #f43f5e;
+  background: rgba(244, 63, 94, 0.1);
+  box-shadow: 0 0 40px rgba(244, 63, 94, 0.2);
+}
+
+.counter-display.zero {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+.counter-value {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.counter-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+.step-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step-label {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.step-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.step-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  border: 2px solid var(--border-color);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.step-btn:hover {
+  border-color: #06b6d4;
+  color: #06b6d4;
+}
+
+.step-btn.active {
+  background: linear-gradient(135deg, #34d399, #06b6d4);
+  border-color: transparent;
+  color: white;
+}
+
+.counter-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ctrl-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.ctrl-btn span {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.ctrl-btn small {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ctrl-btn.increment {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  color: white;
+}
+
+.ctrl-btn.decrement {
+  background: linear-gradient(135deg, #f43f5e, #fb7185);
+  color: white;
+}
+
+.ctrl-btn.reset {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: white;
+}
+
+.ctrl-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.ctrl-btn:active {
+  transform: translateY(0);
+}
+
+.counter-history {
+  padding: 1rem 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.counter-history p {
+  margin: 0;
+}
+
+.counter-history strong {
+  color: var(--text-primary);
+}
